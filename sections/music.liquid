@@ -1,0 +1,27 @@
+{{ 'music-section.css' | asset_url | stylesheet_tag }}
+
+<div class="page-width py-20">
+  <h2 class="">MUSIC</h2>
+  <p><small>Interact first and hover over album cover to play my tracks</small></p>
+  <div class="flex flex-wrap" data-music-section>
+
+  </div>
+</div>
+
+<script src="{{ 'music-section.js' | asset_url }}" defer="defer"></script>
+
+{% schema %}
+{
+  "name": "Music",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    
+  ],
+  "presets": [
+    {
+      "name": "Music"
+    }
+  ]
+}
+  {% endschema %}

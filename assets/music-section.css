@@ -1,0 +1,40 @@
+.header__heading .h2{
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+#musicItem:hover{
+    transition: 0.2s all;
+    transform: scale(1.05);
+}
+#musicItem{
+    position: relative;
+}
+#musicItem:before{
+    content: "";
+    width: 85%;
+    height: 85%;
+    display: block;
+    background-image: url('https://cdn.shopify.com/s/files/1/0605/0316/3033/files/disc2.png?v=1644165327');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: -1;
+}
+
+#musicItem:hover:before{
+    left: 30%;
+    animation: rotation 2s infinite linear;
+
+}
+#musicItem:hover #musicItemImg{
+    margin-left:-50px;
+}
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
